@@ -1,0 +1,21 @@
+<mvc:View
+        controllerName="sap.ui.demo.wt.controller.App"
+        xmlns="sap.m"
+        xmlns:mvc="sap.ui.core.mvc">
+    <Button text="Say Hello" press="onShowHello"/>
+    <!-- reference the name of the controller on the first line so you can define a button that can trigger
+         a function -->
+
+    <!--
+     We add an sap.m.Input control to the view. With this, the user can enter a recipient for the greetings.
+     We bind its value to a SAPUI5 model
+    -->
+
+    <!-- The curly brackets {…} indicate that data binding shall be used  -->
+    <Input
+            value="{/recipient/name}"
+            description="Hello {/recipient/name}"
+            valueLiveUpdate="true"
+            width="60%"
+    />
+</mvc:View>
